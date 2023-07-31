@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var Review = new Schema({
+var ReviewSchema = new Schema({
   review: {
     type: String
   },
@@ -22,3 +22,7 @@ var Review = new Schema({
     required: true
   }
 });
+
+const Review = mongoose.model('reviews', ReviewSchema);
+
+module.exports = Review;

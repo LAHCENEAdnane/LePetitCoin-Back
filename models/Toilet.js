@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var Toilet = new Schema({
+var ToiletSchema = new Schema({
   address: {
     type: String
   },
@@ -41,3 +41,7 @@ var Toilet = new Schema({
     type: Number
   }
 });
+
+const Toilet = mongoose.model('toilets', ToiletSchema);
+
+module.exports = Toilet;

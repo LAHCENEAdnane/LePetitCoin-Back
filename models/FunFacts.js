@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var FunFacts = new Schema({
+var FunFactsSchema = new Schema({
   pictures: {
     type: String
   },
@@ -11,3 +11,7 @@ var FunFacts = new Schema({
     type: String
   }
 });
+
+const FunFact = mongoose.model('funFacts', FunFactsSchema);
+
+module.exports = FunFact;
