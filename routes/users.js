@@ -4,7 +4,7 @@ const User = require('../models/Users')
 
 const uid2 = require('uid2');
 const bcrypt = require('bcrypt');
-
+// recupére la fonction checkbody
 const { checkBody } = require('../modules/checkBody');
 
 
@@ -12,8 +12,8 @@ const { checkBody } = require('../modules/checkBody');
 router.post('/signup', function(req, res, next) {
   // hash le mdp
   const hash = bcrypt.hashSync(req.body.password, 10);
-
-  if (!checkBody(req.body, ['username', 'password'])) {
+  // si checkBody(req.body.userName, req.body.password) sont false return error
+  if (!checkBody(req.body, ['userName', 'password'])) {
     res.json({ result: false, error: 'Missing or empty fields' });
     return;
   }
@@ -36,7 +36,7 @@ router.post('/signup', function(req, res, next) {
       });
     }else{
       //sinon return false
-      res.json({ result: false,error: "user already exists" });
+      res.json({ result: false, error: "user already exists" });
     }
   });
 });
