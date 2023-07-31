@@ -42,4 +42,22 @@ router.post('/signup', function(req, res, next) {
 });
 
 
+//Sign in, if user has an account
+router.post('/signin', (req, res) => {
+
+  //check if all inputs are filled
+  if (!checkBody(req.body, ['username', 'password'])) {
+    res.json({ result: false, error: 'Missing or empty fields' });
+    return;
+  }
+//find user in DB if they exist
+  User.findOne({ username: req.body.username }).then(data => {
+      if (data && bcrypt.compareSync(req.body.password, data.password)) {
+      res.json({ result: true, token: data.token });
+    } else {
+      res.json({ result: false, error: 'User not found' });
+    }
+  });
+});
+
 module.exports = router;
