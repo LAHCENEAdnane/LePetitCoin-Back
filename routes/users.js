@@ -19,8 +19,7 @@ router.post('/signup', function(req, res, next) {
     return;
   }
 
-  
-  
+
   
   // recherche dans la bdd selon l'userName
   User.findOne({ userName: req.body.userName }).then(data => {
