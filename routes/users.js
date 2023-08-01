@@ -13,7 +13,7 @@ router.post('/signup', function(req, res, next) {
   // hash le mdp
   const hash = bcrypt.hashSync(req.body.password, 10);
 
-  if (!checkBody(req.body, ['username', 'password'])) {
+  if (!checkBody(req.body, ['userame', 'password'])) {
     res.json({ result: false, error: 'Missing or empty fields' });
     return;
   }
