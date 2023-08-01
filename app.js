@@ -1,16 +1,17 @@
 require('dotenv').config();
+require('./models/connection')
+
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-require('./models/connection')
-
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
+const cors = require('cors');
+
 
 let app = express();
 
-const cors = require('cors');
 app.use(cors());
 
 app.use(logger('dev'));
