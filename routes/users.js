@@ -37,7 +37,8 @@ router.post('/signup', function(req, res, next) {
        // sauvegarde l'user a la bdd
        newUser.save().then((data) => {
          //si il n'existe pas le créer et return true avec le token affilier
-         res.json({ result: true, token: data.token });
+         console.log(data)
+         res.json({ result: true, token: data.token, username: data.userName });
         });
       }
       }else{
