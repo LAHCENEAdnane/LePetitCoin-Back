@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 // recupére la fonction checkbody
 const { checkBody } = require('../modules/checkBody');
 
+const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 /* POST création d'un User */
 router.post('/signup', function(req, res, next) {
@@ -17,6 +18,9 @@ router.post('/signup', function(req, res, next) {
     res.json({ result: false, error: 'Missing or empty fields' });
     return;
   }
+
+  
+  
   
   // recherche dans la bdd selon l'userName
   User.findOne({ userName: req.body.userName }).then(data => {
@@ -29,12 +33,15 @@ router.post('/signup', function(req, res, next) {
       password: hash,
       token : uid2(32),
      });
-     // sauvegarde l'user a la bdd
-     newUser.save().then((data) => {
-      //si il n'existe pas le créer et return true avec le token affilier
-       res.json({ result: true, token: data.token });
-      });
-    }else{
+     // si le regex est vrai sauvegarde de l'user sinon return
+     if(EMAIL_REGEX.test(req.body.email)){
+       // sauvegarde l'user a la bdd
+       newUser.save().then((data) => {
+         //si il n'existe pas le créer et return true avec le token affilier
+         res.json({ result: true, token: data.token });
+        });
+      }
+      }else{
       //sinon return false
       res.json({ result: false, error: "user already exists" });
     }
