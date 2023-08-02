@@ -7,6 +7,8 @@ require('./models/connection')
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
+let toiletRouter = require('./routes/toilet');
+let reviewRouter = require('./routes/review');
 
 let app = express();
 
@@ -21,5 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/toilet', toiletRouter);
+app.use('/review', reviewRouter);
 
 module.exports = app;

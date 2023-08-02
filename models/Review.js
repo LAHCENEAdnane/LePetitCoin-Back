@@ -7,19 +7,17 @@ var ReviewSchema = new Schema({
   rating: {
     type: Number
   },
-  pictures: {
-    type: String
-  },
+  // pictures: {
+  //   type: String
+  // },
   title: {
     type: String
   },
-  Users: {
-    type: Schema.Types.ObjectId,
-    required: true
+  users: {
+    type: mongoose.Schema.Types.ObjectId, ref: 'users' ,
   },
-  Toilet: {
-    type: Schema.Types.ObjectId,
-    required: true
+  toilet: {
+    type: mongoose.Schema.Types.ObjectId, ref: 'toilets' ,
   }
 });
 

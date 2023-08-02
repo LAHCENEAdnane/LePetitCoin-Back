@@ -4,9 +4,9 @@ var ToiletSchema = new Schema({
   address: {
     type: String
   },
-  pictures: {
-    type: String
-  },
+  // pictures: {
+  //   type: String
+  // },
   type: {
     type: String
   },
