@@ -8,9 +8,9 @@ router.post('/', async (req, res) => {
 
     // Créer une nouvelle instance de Review avec les données reçues
     const newReview = new Review({
+      title: title,
       review: review,
       rating: rating,
-      title: title,
       users: users,
       toilet: toilet
     });

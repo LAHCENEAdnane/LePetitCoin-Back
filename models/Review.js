@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ReviewSchema = new Schema({
+  title: {
+    type: String
+  },
   review: {
     type: String
   },
@@ -10,9 +13,6 @@ var ReviewSchema = new Schema({
   // pictures: {
   //   type: String
   // },
-  title: {
-    type: String
-  },
   users: {
     type: mongoose.Schema.Types.ObjectId, ref: 'users' ,
   },
