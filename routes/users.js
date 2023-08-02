@@ -19,8 +19,7 @@ router.post('/signup', function(req, res, next) {
     return;
   }
 
-  
-  
+
   
   // recherche dans la bdd selon l'userName
   User.findOne({ userName: req.body.userName }).then(data => {
@@ -54,16 +53,18 @@ router.post('/signup', function(req, res, next) {
 router.post('/signin', (req, res) => {
 
   //check if all inputs are filled
-  if (!checkBody(req.body, ['username', 'password'])) {
+  if (!checkBody(req.body, ['email', 'password'])) {
     res.json({ result: false, error: 'Missing or empty fields' });
     return;
   }
 //find user in DB if they exist
-  User.findOne({ username: req.body.username }).then(data => {
-      if (data && bcrypt.compareSync(req.body.password, data.password)) {
+  User.findOne({ email: req.body.email }).then(data => {
+    if (data && bcrypt.compareSync(req.body.password, data.password)) {
       res.json({ result: true, token: data.token });
+      console.log(data)
     } else {
       res.json({ result: false, error: 'User not found' });
+      // console.log(data)
     }
   });
 });

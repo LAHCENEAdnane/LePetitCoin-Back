@@ -13,6 +13,9 @@ var ToiletSchema = new Schema({
   availability: {
     type: String
   },
+  fee: {
+    type: Boolean,
+  },
   handicapAccess: {
     type: Boolean
   },
