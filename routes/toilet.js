@@ -56,7 +56,7 @@ router.get("/", (req, res) => {
 //     res.json({ result: false, error: "taper une ville" });
 //     return;
 //   }
-  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
+  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).limit(20).then(
     (data) => {
       if (data === null) {
         res.json({ result: false, error: "mince, c'est schrodingers coin" });
