@@ -10,9 +10,9 @@ router.post('/', (req, res) => {
   User.findOne({ token: userToken }).then(data => {
     if (data) {
       const newReview = new Review({
-        review: review,
-        rating: rating,
         title: title,
+        rating: rating,
+        review: review,
         users: data._id,
         toilet: toiletId
       });
