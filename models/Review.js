@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+
 var ReviewSchema = new Schema({
   review: {
     type: String
@@ -13,7 +14,7 @@ var ReviewSchema = new Schema({
   title: {
     type: String
   },
-  users: {
+  user: {
     type: mongoose.Schema.Types.ObjectId, ref: 'users' ,
   },
   toilet: {
