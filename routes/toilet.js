@@ -87,21 +87,20 @@ router.post("/", (req, res) => {
 
 /* GET home page. */
 router.get("/", async (req, res) => {
-  const { latitude, longitude, distance } = req.query;
+//   const { latitude, longitude, distance } = req.query;
 
-  try {
-    // Call the fetchToiletsNearby function with the provided coordinates
-    const nearbyToilets = await fetchToiletsNearby(
-      parseFloat(latitude),
-      parseFloat(longitude)
-    );
-
-    // Send the filtered nearbyToilets array as the API response
-    res.json({ toilets: nearbyToilets });
-  } catch (error) {
-    // Handle errors and send an appropriate response
-    res.status(500).json({ error: "Internal server error" });
-  }
+//   try {
+//     // Call the fetchToiletsNearby function with the provided coordinates
+//     const nearbyToilets = await fetchToiletsNearby(
+//       parseFloat(latitude),
+//       parseFloat(longitude)
+//     );
+//     // Send the filtered nearbyToilets array as the API response
+//     res.json({ toilets: nearbyToilets });
+//   } catch (error) {
+//     // Handle errors and send an appropriate response
+//     res.status(500).json({ error: "Internal server error" });
+//   }
   Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } })
     .limit(20)
     .then((data) => {
