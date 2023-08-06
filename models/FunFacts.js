@@ -6,6 +6,7 @@ var FunFactsSchema = new Schema({
   },
   title: {
     type: String
+    
   },
   text: {
     type: String

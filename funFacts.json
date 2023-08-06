@@ -2,5 +2,173 @@
     {
     "title" : "Les WC dans l’antiquité",
     "text" : "Selon des archéologues, les toilettes existaient déjà vers le XXVème siècle avant JC. A l’époque, les hommes ont déjà utilisé des toilettes avec chasse d’eau. Au Pakistan par exemple, les toilettes fonctionnaient déjà à l’eau et elles sont reliées par des drains entourés des briques. En Mésopotamie, on a également découvert des traces d’égouts qui, reliés à des tuyaux, servaient d’évacuation."
+    },
+    {
+    "title" : "Pourquoi existe-t-il un si grand nombre de termes pour désigner les toilettes publiques ?",
+    "text" : "Comme c'est souvent le cas, lorsqu'il s'agit de désigner des activités humaines considérées comme 'gênantes' parce qu'elles choquent la pudeur, il existe un très grand nombre de termes pour désigner les toilettes publiques. Outre les mots relativement neutres, comme WC ou vespasiennes, on a souvent recours à des euphémismes pour nommer ce genre d'endroits. On parle du 'petit coin', du 'lieu d'aisance', 'là où où même les rois vont à pied'. Euphémismes qui contrastent avec les termes vulgaires comme 'pissoir', 'pissotière'..."
+    },
+    {
+    "title" : "Le saviez-vous ?",
+    "text" : "Arthur Giblin est l ‘inventeur de la première chasse d’eau."
+    },
+    {
+    "title" : "Des toilettes quasiment aussi vieux que  Mathusalem ",
+    "text" : "Les premières toilettes encore en fonctionnement datent de 4000 ans. Elles peuvent être vues dans un château de la ville de  Knossos en Grèce."   
+    },
+    {
+    "title" : "Le saviez-vous ?",
+    "text" : "Il faut plus de 26 litres d’eau pour faire fonctionner une chasse d’eau."
+    },
+    {
+    "title" : "Un pipi à prix d’or",
+    "text" : "Vous devrez vous rendre dans l'espace si vous voulez voir les toilettes les plus chères au monde. Elles sont installées dans la Station spatiale internationale et coûtent environ 23 millions de dollars."
+    },
+    {"title" : "Pour le bien-être animal…",
+    "text" : "En Chine, il y a des toilettes publiques pour chiens."
+    },
+    {
+    "title" : "Le bal des microbes",
+    "text" : "Seulement 5% de la population mondiale se lave les mains rigoureusement,  avec du savon."
+    },
+    {
+    "title" : "La télécommande gagne le match !",
+    "text" : "En Afghanistan, il y a plus de télévisions que de toilettes. 90% de la population possède une télévision, mais seulement 7% des toilettes (avec une chasse d’eau)."
+    },
+    {
+    "title" : "Le trône high-tech",
+    "text" : "Selon une étude, plus votre téléphone intelligent est doté de fonctionnalités, plus vous restez longtemps aux toilettes."
+    },
+    {
+    "title" : "Petite astuce hygiénique",
+    "text" : "Vous pouvez facilement trouver les toilettes les plus propres dans un lieu public, si vous vous souvenez que la première cabine de toilettes d'une rangée est la moins utilisée et donc la plus propre de toutes."
+    },
+    {
+    "title" : "Le saviez-vous ?",
+    "text" : "La World Toilet Organization a été fondée le 19 novembre 2001 et nous pouvons célébrer la journée internationale des toilettes ce même jour."
+    },
+    {
+    "title" : "Soyez prudent !",
+    "text" : "Des accidents peuvent se produire dans les toilettes. Le roi George II est même mort en tombant des toilettes en 1760. Près de 40 000 Américains se blessent chaque année dans les toilettes."
+    },
+    {
+    "title" : "Personne ne peut échapper à l'appel de la nature.",
+    "text" : "Nous nous rendons aux toilettes environ 2 500 fois par an, voire plus si nous avons mal au ventre plusieurs fois par an."
+    },
+    {
+    "title" : "Made in China",
+    "text" : "Le papier hygiénique aurait été inventé en Chine au VIe siècle."
+    },
+    {
+    "title" : "Des couches pleines d’aventures…",
+    "text" : "En moyenne, les bébés changent leur couche 10 000 fois avant d'apprendre à utiliser les toilettes eux-mêmes. Un travail difficile pour un parent seul, n'est-ce pas ?"
+    },
+    {
+    "title" : "Le saviez-vous ?",
+    "text" : "Une planche à découper de cuisine moyenne contient environ 200 % de bactéries fécales de plus qu'une lunette de WC."
+    },
+    {
+    "title" : "Les germes en promenade…",
+    "text" : "Les germes provenant d'une chasse d'eau peuvent se déplacer sur une distance allant jusqu'à 2,5 mètres. Chaque fois que vous tirez la chasse d'eau, les germes sont transportés par l'air et peuvent devenir une cause potentielle d'infection. Il est donc conseillé de se déplacer rapidement après avoir tiré la chasse d'eau."
+    },
+    {
+    "title" : "Plouf !",
+    "text" : "Plus de 7 millions de personnes aux États-Unis ont admis avoir laissé tomber leur téléphone portable dans la cuvette des toilettes. "
+    },
+    {
+    "title" : "Des bactéries connectées",
+    "text" : "Vos téléphones portables ont 18 fois plus de bactéries que les poignées de toilettes."
+    },
+    {
+    "title" : "Le saviez-vous ?",
+    "text" : "Une personne peut être sujette à des maladies des reins et de la vessie si elle se retient d'uriner simplement parce que les toilettes des lieux publics ne sont pas propres."
+    },
+    {
+    "title" : "Un peu de chimie …",
+    "text" : "L'urée, une substance chimique clé de l'urine, peut tuer les champignons et les bactéries."
+    },
+    {
+    "title" : "Des toilettes de l’espace !",
+    "text" : "La NASA a récemment dépensé 23,4 millions de dollars pour concevoir des toilettes à succion, qui pourraient être utilisées dans la station spatiale internationale."
+    },
+    {
+    "title" : "Le rouleau qui a tout changé",
+    "text" : "La Scot Paper Company a été la première à fabriquer du papier hygiénique en rouleau, en 1890."
+    },
+    {
+    "title" : "Pause high-tech, risques back-end.",
+    "text" : "Une position assise prolongée sur la lunette des toilettes peut provoquer des hémorroïdes. Utiliser votre téléphone portable ou lire le journal pendant que vous êtes aux toilettes sont donc des causes d'hémorroïdes."
+    },                        
+    {
+    "title" : "Un désodorisant en DIY",
+    "text" : "Aimez-vous le parfum du désodorisant que vous utilisez dans vos toilettes ? À l'origine, des grenades farcies de clous de girofle étaient utilisées pour fabriquer le 'premier désodorisant pour toilettes'."
+    },
+    {
+    "title" : "Un vrai débat !",
+    "text" : "Trois personnes sur quatre placent l'abattant devant, pour stocker le papier hygiénique dans leurs toilettes. Et vous ? "
+    },
+    {
+    "title" : "Paris, championne d'Europe des toilettes publiques !",
+    "text" : "La capitale française est la ville européenne qui compte le plus de toilettes publiques, a relevé Le Monde dans l'analyse de données publiques, publiée sur son site Internet. Dans le top 10 de ce classement, cinq villes sont françaises. Selon les données du Monde, Paris se classe donc en 1ere position grâce à ses plus de 700 toilettes publiques (les sanisettes, mais plus largement tous les sanitaires accessibles au public) permettant d'atteindre une densité record 6,72 toilettes par km2, devant Lyon (Rhône) et ses 3 toilettes par km2 et la ville suisse de Zürich (2,9 toilettes par km2). Parmi les villes françaises bien positionnées, on retrouve la ville de Rennes (Ille-et-Vilaine), à la 4e place, devant Catane en Italie et Copenhague au Danemark. Les 11 villes françaises de plus de 200 000 habitants atteignent collectivement à 1,44 WC public par km2, calcule également Le Monde dans son article. Notons la présence de Strasbourg (Bas-Rhin) à la 74e place avec 0,27 toilettes par km2."
+    },
+    {
+    "title" : "La France, la meilleure pour les toilettes",
+    "text" : "Dans son étude, le journal Le Monde a également mesuré la densité de toilettes publiques dans d'autres villes en dehors de notre continent. La France et ses villes n'a pas à rougir. New York dénombre 0,28 toilette par km2, Montréal 0,18 toilette par km2, Vancouver 0,75 toilette par km2 ou encore Mexico, avec seulement 0,07 toilette par km2."
+    },
+    {
+    "title" : "Du papier à prix d’or !", 
+    "text" : "Environ quatre milliards de personnes n'utilisent pas de papier toilette. Environ 70 à 75 % de la population mondiale n'utilise pas de papier toilette. Dans certaines régions du monde, les gens n'utilisent pas de papier toilette en raison du manque d'arbres. Certaines personnes n'utilisent pas de papier toilette parce qu'elles n'en ont pas les moyens. De nombreuses personnes préfèrent ne pas dépenser d'argent pour s'essuyer le derrière avec du papier fantaisie."
+    },
+    {
+    "title" : "Le saviez-vous ?", 
+    "text" : "L'eau est le solvant universel, pas le papier. Le papier hygiénique a des utilisations secondaires telles que les soins du nez, le démaquillage, le recouvrement des sièges de toilettes, le matériel d'emballage, le nettoyage des miroirs, le nettoyage des lunettes, etc. Le papier toilette est constitué de deux couches de papier de 10 épaisseurs ; le papier à une couche est constitué de papier de 13 épaisseurs, de sorte que le papier à deux couches n'est pas nécessairement deux fois plus épais. D’ailleurs, si l’on compare les deux sortes de papier,  on constate qu'en moyenne, le papier hygiénique à une couche dure deux fois plus longtemps. et se décomposer plus rapidement dans une fosse septique."
+    },
+    {
+    "title" : "Une étude à la feuille près !", 
+    "text" : "Le rouleau de papier toilette moyen dure environ cinq jours dans un ménage moyen. Les consommateurs utilisent environ 8 à 9 feuilles de papier par utilisation. Une personne utilise en moyenne 57 feuilles de papier toilette par jour ! Mais tout dépend de ce qu’il a mangé la veille… "
+    },
+    {
+    "title" : "Qui vole un rouleau de PQ…", 
+    "text" : "7% des Américains volent des rouleaux de papier toilette dans les hôtels ou les motels."
+    },
+    {
+    "title" : "Le saviez-vous ?", 
+    "text" : "Si vous suspendez votre papier toilette de manière à pouvoir le tirer par le bas, vous êtes considéré comme plus intelligent que quelqu'un qui suspend son papier toilette et le tire par le haut."
+    },
+    {
+    "title" : "Une mini-forêt par paire de fesses", 
+    "text" : "Il faut environ 384 arbres pour fabriquer le papier toilette qu'un homme utilise au cours de sa vie. Une personne moyenne utilise 100 rouleaux de papier toilette par an (plus de 20 000 feuilles). "
+    },
+    {
+    "title" : "Le saviez-vous ?", 
+    "text" : "La production quotidienne de papier toilette est d'environ 83 048 116 rouleaux par jour. "
+    },
+    {
+    "title" : "Rien ne se perd, rien ne se créé…", 
+    "text" : "Le papier hygiénique est souvent utilisé pour confectionner des robes."
+    },
+    {
+    "title" : "Le saviez-vous ?", 
+    "text" : " 810 rouleaux de papier hygiénique seraient produits à partir d'un seul arbre."
+    },
+    {
+    "title" : "Des habitudes locales", 
+    "text" : "Dans de nombreux pays, le papier n'est pas jeté dans la chasse d'eau."
+    },
+    {
+    "title" : "L’avenir de l’imprimante ?", 
+    "text" : "Aujourd'hui, il existe une machine de bureau qui transforme le papier de photocopie usagé en rouleaux de papier hygiénique, directement au bureau. "
+    },
+    {
+    "title" : "Uncle Sam is watching you", 
+    "text" : "Le papier hygiénique a été breveté pour la première fois à Albany, dans l'État de New York."
+    },
+    {
+    "title" : "Profession : torcheur de fesses royales", 
+    "text" : "Porte-coton, c’est ainsi qu’on appelait la personne chargée d’assister le roi ou la reine lors de ses royaux besoins. Peut-être qu’aujourd’hui ça ne se met pas vraiment sur une bio Tinder, mais à l’époque, c’était un poste super important ! Pourquoi ? À cause du pouvoir d’être à proximité du pouvoir! C’était pas rare pour des courtisans ou des ministres de demander discrètement au porte-coton de glisser un mot au roi à propos de tel problème ou telle faveur à accorder."
+    },
+    {
+    "title" : "Les toilettes à la turque, des toilettes plus hygiéniques…", 
+    "text" : "Il fut un temps où les toilettes à la turque n’avaient pas de lunettes et exigeaient des consommateurs une bonne vue, surtout de près, pour surveiller que les humeurs naturelles suivent leurs cours, sans éclabousser le vestiaire. On les appelait alors à la turque et les Ottomans se targuaient d’avoir enseigné à l’Occident qu’il était plus hygiénique d’aller au petit coin pourvu d’un trou, au lieu de faire venir le pot de chambre, qui ne sentait pas tellement la rose, sous le lit..."
     }
+    
  ]
