@@ -10,7 +10,7 @@ const FunFact = require('../models/FunFacts');
 //       res.json({data});
 //     });
 //   });
-  router.get('/funfact', async (req, res) => {
+  router.get('/funFacts', async (req, res) => {
     try {
         //await est utilisé pour attendre que la requête MongoDB soit terminée avant de continuer, s'utilise avec async
       const funFact = await FunFact.findOne().skip(Math.floor(Math.random() * await FunFact.countDocuments()));
