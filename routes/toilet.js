@@ -6,7 +6,7 @@ const { checkBody } = require("../modules/checkBody");
 
 router.post('/', (req, res) => {
     try{
-      if (!checkBody(req.body, ["address","type","availability","fee","handicapAccess","coatHanger","changingTable","soap","toiletPaper","cleanliness","feminineHygieneProduct","longitude","latitude"])) {
+    if (!checkBody(req.body, ["address","availability"])) {
         res.json({ result: false, error: "Remplissez tous les champs de saisie" });
         return;
       }
@@ -30,8 +30,8 @@ router.post('/', (req, res) => {
             toiletPaper,
             cleanliness, 
             feminineHygieneProduct, 
-            longitude, 
-            latitude
+            // longitude, 
+            // latitude
           });
               
          newToilet.save().then((data) => {
@@ -63,7 +63,6 @@ router.get("/", (req, res) => {
       } else {
         res.json({ result: true, toilets: data });
       }
-      console.log(data);
     }
   );
 });
@@ -72,7 +71,7 @@ router.get('/:id',(req,res) => {
     const toiletId = req.params.id
     Toilet.findOne({ _id: toiletId })
  .then(data => {
-   console.log(data);
+  res.json({ result: true,  data });
  });
 })
 

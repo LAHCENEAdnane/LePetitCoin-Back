@@ -8,7 +8,7 @@ var ToiletSchema = new Schema({
   //   type: String
   // },
   type: {
-    type: String
+    type: Boolean
   },
   availability: {
     type: String
