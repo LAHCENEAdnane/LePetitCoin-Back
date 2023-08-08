@@ -1,6 +1,6 @@
-let express = require('express');
+let express = require("express");
 let router = express.Router();
-const Toilet = require('../models/Toilet');
+const Toilet = require("../models/Toilet");
 const { checkBody } = require("../modules/checkBody");
 
 
@@ -63,6 +63,7 @@ router.get("/", (req, res) => {
       } else {
         res.json({ result: true, toilets: data });
       }
+      console.log(data);
     }
   );
 });
@@ -71,7 +72,7 @@ router.get('/:id',(req,res) => {
     const toiletId = req.params.id
     Toilet.findOne({ _id: toiletId })
  .then(data => {
-  res.json({ result: true,  data });
+   console.log(data);
  });
 })
 
