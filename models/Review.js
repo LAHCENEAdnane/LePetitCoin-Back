@@ -5,7 +5,7 @@ var ReviewSchema = new Schema({
   title: {
     type: String
   },
-  review: {
+  text: {
     type: String
   },
   rating: {
@@ -14,9 +14,6 @@ var ReviewSchema = new Schema({
   // pictures: {
   //   type: String
   // },
-  title: {
-    type: String
-  },
   user: {
     type: mongoose.Schema.Types.ObjectId, ref: 'users' ,
   },

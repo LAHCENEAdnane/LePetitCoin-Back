@@ -7,7 +7,7 @@ const User = require('../models/Users')
 router.post('/:token', (req, res) => {
 
   const {token} = req.params
-  const { review, rating, title, toiletId } = req.body;
+  const { text, rating, title, toiletId } = req.body;
 
   User.findOne({ token }).then(data => {
     console.log(data)
@@ -15,7 +15,7 @@ router.post('/:token', (req, res) => {
       const newReview = new Review({
         title: title,
         rating: rating,
-        review: review,
+        text: text,
         user: data._id,
         toilet: toiletId
       });
@@ -79,5 +79,22 @@ router.put('/:token',(req,res) => {
   });
 })
 
+// router.post('/upload', async (req, res) => {
+//   const formData = new FormData();
+//   const uniqid = require('uniqid');
+//   const cloudinary = require('cloudinary').v2;
+//   const fs = require('fs');
+//   const photoPath = `./tmp/${uniqid()}.jpg`;
+//   const resultMove = await req.files.photoFromFront.mv(photoPath);
+  
+  
+//   if (!resultMove) {
+//       const resultCloudinary = await cloudinary.uploader.upload(photoPath);
+//       fs.unlinkSync(photoPath);
+//       res.json({ result: true, url: resultCloudinary.secure_url }); 
+//   } else {
+//     res.json({ result: false, error: resultMove });
+//   }
+// });
 
 module.exports = router;
