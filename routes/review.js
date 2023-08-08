@@ -1,8 +1,8 @@
 let express = require('express');
 let router = express.Router();
-const Review = require('../models/Review');
-const Toilet = require ('../models/Toilet')
+const Review = require('../models/review');
 const User = require('../models/Users')
+const Toilette = require('../models/Toilet');
 
 router.post('/:token', (req, res) => {
 
@@ -10,7 +10,7 @@ router.post('/:token', (req, res) => {
   const { text, rating, title, toiletId } = req.body;
 
   User.findOne({ token }).then(data => {
-    console.log(data)
+    // console.log('data',data)
     if (data) {
       const newReview = new Review({
         title: title,
@@ -55,7 +55,7 @@ router.put('/:token',(req,res) => {
           data.title = title;
           data.rating = rating;
           data.review = review;
-
+          
           // Enregistrez les modifications dans la base de données
           data.save().then(updatedReview => {
             res.json(updatedReview);
@@ -96,5 +96,25 @@ router.put('/:token',(req,res) => {
 //     res.json({ result: false, error: resultMove });
 //   }
 // });
+router.get('/:toiletteId', async (req, res) => {
+  const toiletteId = req.params.toiletteId;
+
+  try {
+    // Trouver la toilette par ID
+    const toilette = await Toilette.findById(toiletteId);
+
+    if (!toilette) {
+      return res.status(404).json({ message: 'Toilette not found' });
+    }
+
+    // Trouver toutes les revues (reviews) associées à cette toilette
+    const reviews = await Review.find({ toilet: toiletteId });
+    res.json(reviews);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+ 
 
 module.exports = router;
