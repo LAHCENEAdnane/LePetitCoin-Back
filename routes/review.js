@@ -108,7 +108,11 @@ router.get('/:toiletteId', async (req, res) => {
     }
 
     // Trouver toutes les revues (reviews) associées à cette toilette
-    const reviews = await Review.find({ toilet: toiletteId });
+    const reviews = await Review.find({ toilet: toiletteId }).populate('user',["userName"]);
+    if (!reviews) {
+      return res.status(404).json({ error: 'reviews not found' });
+    }
+    
     res.json(reviews);
   } catch (error) {
     console.error(error);
