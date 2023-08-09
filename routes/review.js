@@ -24,7 +24,7 @@ router.post('/:token', (req, res) => {
         // Renvoyer la réponse avec la nouvelle instance de Review créée
         const reviewId = data._id;
         console.log(reviewId);
-        // res.json(data);
+        res.json(data);
       })
       .catch(error => {
         // En cas d'erreur lors de l'enregistrement de la Review
