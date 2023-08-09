@@ -96,6 +96,8 @@ router.put('/:token',(req,res) => {
 //     res.json({ result: false, error: resultMove });
 //   }
 // });
+
+
 router.get('/:toiletteId', async (req, res) => {
   const toiletteId = req.params.toiletteId;
 
