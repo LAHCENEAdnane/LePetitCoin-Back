@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
         return;
       }
   
-      const {address, type, availability, fee, handicapAccess, coatHanger, changingTable, soap, toiletPaper, cleanliness, feminineHygieneProduct, longitude, latitude} = req.body;
+      const {address, type, availability, fee, handicapAccess, coatHanger, changingTable, soap, toiletPaper, cleanliness, feminineHygieneProduct} = req.body;
       
       // Créer une nouvelle instance de Review avec les données reçues
       Toilet.findOne({ address: req.body.address }).then(data => {
@@ -84,20 +84,20 @@ router.post("/recherche", (req, res) => {
     });
 });
 
-// router.get("/map", async (req, res) => {
-//   const { latitude, longitude } = req.query;
+router.get("/map", async (req, res) => {
+  const { latitude, longitude } = req.query;
 
-//   Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
-//     (data) => {
-//       if (data === null) {
-//         res.json({ result: false, error: "mince, c'est schrodingers coin" });
-//       } else {
-//         res.json({ result: true, toilets: data });
-//       }
-//       console.log(data);
-//     }
-//   );
-// });
+  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
+    (data) => {
+      if (data === null) {
+        res.json({ result: false, error: "mince, c'est schrodingers coin" });
+      } else {
+        res.json({ result: true, toilets: data });
+      }
+      console.log(data);
+    }
+  );
+});
 
 router.get('/:id',(req,res) => {
   const toiletId = req.params.id
