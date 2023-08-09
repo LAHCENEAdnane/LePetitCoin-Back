@@ -2,7 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ReviewSchema = new Schema({
-  review: {
+  title: {
+    type: String
+  },
+  text: {
     type: String
   },
   rating: {
@@ -11,9 +14,6 @@ var ReviewSchema = new Schema({
   // pictures: {
   //   type: String
   // },
-  title: {
-    type: String
-  },
   user: {
     type: mongoose.Schema.Types.ObjectId, ref: 'users' ,
   },
