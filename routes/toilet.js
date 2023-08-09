@@ -6,19 +6,20 @@ const { checkBody } = require("../modules/checkBody");
 
 router.post('/', (req, res) => {
     try{
-    if (!checkBody(req.body, ["address","availability"])) {
-        res.json({ result: false, error: "Remplissez tous les champs de saisie" });
-        return;
-      }
+    // if (!checkBody(req.body, ["availability","commune", "point_geo.lon", "point_geo.lat"])) 
+    // {
+    //     res.json({ result: false, error: "Remplissez tous les champs de saisie" });
+    //     return;
+    //   }
   
-      const {address, type, availability, fee, handicapAccess, coatHanger, changingTable, soap, toiletPaper, cleanliness, feminineHygieneProduct} = req.body;
+      const {commune, type, availability, fee, handicapAccess, coatHanger, changingTable, soap, toiletPaper, cleanliness, feminineHygieneProduct, lon, lat} = req.body;
       
       // Créer une nouvelle instance de Review avec les données reçues
-      Toilet.findOne({ address: req.body.address }).then(data => {
+      Toilet.findOne({ point_geo : req.body.lon, lat: req.body.lat }).then(data => {
         console.log(data);
         if (data === null) {
           const newToilet = new Toilet({
-            address,
+            commune,
             // pictures,
             type, 
             availability, 
@@ -30,8 +31,10 @@ router.post('/', (req, res) => {
             toiletPaper,
             cleanliness, 
             feminineHygieneProduct, 
-            // longitude, 
-            // latitude
+            point_geo: {
+              lon, 
+              lat
+            }
           });
               
          newToilet.save().then((data) => {

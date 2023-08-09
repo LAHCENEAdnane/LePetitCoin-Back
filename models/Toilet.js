@@ -1,12 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ToiletSchema = new Schema({
-  address: {
-    type: String
+  commune: {
+    type: String,
   },
-  // pictures: {
-  //   type: String
-  // },
   type: {
     type: Boolean
   },
@@ -37,12 +34,7 @@ var ToiletSchema = new Schema({
   feminineHygieneProduct: {
     type: Boolean
   },
-  longitude: {
-    type: Number
-  },
-  latitude: {
-    type: Number
-  }
+  point_geo: {lon: Number, lat: Number}
 });
 
 const Toilet = mongoose.model('toilets', ToiletSchema);
