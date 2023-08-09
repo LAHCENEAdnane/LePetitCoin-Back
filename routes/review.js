@@ -4,10 +4,10 @@ const Review = require('../models/review');
 const User = require('../models/Users')
 const Toilette = require('../models/Toilet');
 
-router.post('/:token', (req, res) => {
+router.post('/:token/:toiletId', (req, res) => {
 
-  const {token} = req.params
-  const { text, rating, title, toiletId } = req.body;
+  const {token,toiletId} = req.params
+  const { text, rating, title,  } = req.body;
 
   User.findOne({ token }).then(data => {
     // console.log('data',data)
