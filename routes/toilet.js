@@ -84,26 +84,28 @@ router.post("/recherche", (req, res) => {
     });
 });
 
-router.get("/map", async (req, res) => {
-  const { latitude, longitude } = req.query;
+// router.get("/map", async (req, res) => {
+//   const { latitude, longitude } = req.query;
 
-  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
-    (data) => {
-      if (data === null) {
-        res.json({ result: false, error: "mince, c'est schrodingers coin" });
-      } else {
-        res.json({ result: true, toilets: data });
-      }
-      console.log(data);
-    }
-  );
-});
+//   Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
+//     (data) => {
+//       if (data === null) {
+//         res.json({ result: false, error: "mince, c'est schrodingers coin" });
+//       } else {
+//         res.json({ result: true, toilets: data });
+//       }
+//       console.log(data);
+//     }
+//   );
+// });
 
 router.get('/:id',(req,res) => {
-    const toiletId = req.params.id
+  const toiletId = req.params.id
+  console.log("hey ho", toiletId)
     Toilet.findOne({ _id: toiletId })
  .then(data => {
-   console.log(data);
+  res.json({ result: true, toilets: data });
+
  });
 })
 
