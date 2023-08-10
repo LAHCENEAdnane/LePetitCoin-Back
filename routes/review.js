@@ -4,10 +4,10 @@ const Review = require('../models/review');
 const User = require('../models/Users')
 const Toilette = require('../models/Toilet');
 
-router.post('/:token', (req, res) => {
+router.post('/:token/:toiletId', (req, res) => {
 
-  const {token} = req.params
-  const { text, rating, title, toiletId } = req.body;
+  const {token,toiletId} = req.params
+  const { text, rating, title,  } = req.body;
 
   User.findOne({ token }).then(data => {
     // console.log('data',data)
@@ -24,7 +24,7 @@ router.post('/:token', (req, res) => {
         // Renvoyer la réponse avec la nouvelle instance de Review créée
         const reviewId = data._id;
         console.log(reviewId);
-        // res.json(data);
+        res.json(data);
       })
       .catch(error => {
         // En cas d'erreur lors de l'enregistrement de la Review
@@ -96,6 +96,8 @@ router.put('/:token',(req,res) => {
 //     res.json({ result: false, error: resultMove });
 //   }
 // });
+
+
 router.get('/:toiletteId', async (req, res) => {
   const toiletteId = req.params.toiletteId;
 

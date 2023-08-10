@@ -56,7 +56,7 @@ router.get("/", (req, res) => {
 //     res.json({ result: false, error: "taper une ville" });
 //     return;
 //   }
-  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).limit(20).then(
+  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
     (data) => {
       if (data === null) {
         res.json({ result: false, error: "mince, c'est schrodingers coin" });
@@ -70,6 +70,18 @@ router.get("/", (req, res) => {
       res.status(500).json({ result: false, error: "An error occurred while fetching toilets" });
     }
   );
+});
+
+router.post("/recherche", (req, res) => {
+  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } })
+    .then((data) => {
+      res.json({ result: true, toilets: data });
+      console.log(data);
+    })
+    .catch((error) => {
+      res.json({ result: false, error: "Error fetching toilets" });
+      console.error("Error fetching toilets:", error);
+    });
 });
 
 router.get("/map", async (req, res) => {
@@ -86,21 +98,6 @@ router.get("/map", async (req, res) => {
     }
   );
 });
-
-// router.get("/map", async (req, res) => {
-//   const { latitude, longitude } = req.query;
-
-//   Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
-//     (data) => {
-//       if (data === null) {
-//         res.json({ result: false, error: "mince, c'est schrodingers coin" });
-//       } else {
-//         res.json({ result: true, toilets: data });
-//       }
-//       console.log(data);
-//     }
-//   );
-// });
 
 router.get('/:id',(req,res) => {
   const toiletId = req.params.id
