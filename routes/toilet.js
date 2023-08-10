@@ -105,7 +105,7 @@ router.get("/map", async (req, res) => {
 router.get('/:id',(req,res) => {
   const toiletId = req.params.id
   console.log("hey ho", toiletId)
-    Toilet.findOne({ _id: toiletId })
+    Toilet.findOne({_id:toiletId})
  .then(data => {
   res.json({ result: true, toilets: data });
 
