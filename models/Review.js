@@ -11,9 +11,9 @@ var ReviewSchema = new Schema({
   rating: {
     type: Number
   },
-  // pictures: {
-  //   type: String
-  // },
+  pictures: {
+    type: [String]
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId, ref: 'users' ,
   },
