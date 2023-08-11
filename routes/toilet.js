@@ -51,27 +51,6 @@ router.post('/', (req, res) => {
   
 
 /* GET home page. */
-<<<<<<< HEAD
-router.get("/", async (req, res) => {
-  const { latitude, longitude, distance } = req.query;
-
-  // try {
-  //   // Call the fetchToiletsNearby function with the provided coordinates
-  //   const nearbyToilets = await fetchToiletsNearby(
-  //     parseFloat(latitude),
-  //     parseFloat(longitude)
-  //   );
-
-  //   // Send the filtered nearbyToilets array as the API response
-  //   res.json({ toilets: nearbyToilets });
-  // } catch (error) {
-  //   // Handle errors and send an appropriate response
-  //   res.status(500).json({ error: "Internal server error" });
-  // }
-  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } })
-    .limit(20)
-    .then((data) => {
-=======
 router.get("/", (req, res) => {
 //   if (!checkBody(req.body, ["commune"])) {
 //     res.json({ result: false, error: "taper une ville" });
@@ -79,7 +58,6 @@ router.get("/", (req, res) => {
 //   }
   Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).limit(20).then(
     (data) => {
->>>>>>> be858a1c0db56854ca7ccc391ab35f9f2f3418c8
       if (data === null) {
         res.json({ result: false, error: "mince, c'est schrodingers coin" });
       } else {
