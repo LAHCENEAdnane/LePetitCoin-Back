@@ -6,8 +6,8 @@ const Toilette = require('../models/Toilet');
 
 router.post('/:token/:toiletId', (req, res) => {
 
-  const {token,toiletId} = req.params
-  const { text, rating, title,  } = req.body;
+  const {token, toiletId} = req.params
+  const { text, rating, title, pictures  } = req.body; console.log("pictures", typeof pictures, pictures)
 
   User.findOne({ token }).then(data => {
     // console.log('data',data)
@@ -16,6 +16,7 @@ router.post('/:token/:toiletId', (req, res) => {
         title: title,
         rating: rating,
         text: text,
+        pictures: pictures,
         user: data._id,
         toilet: toiletId
       });
@@ -24,7 +25,9 @@ router.post('/:token/:toiletId', (req, res) => {
         // Renvoyer la réponse avec la nouvelle instance de Review créée
         const reviewId = data._id;
         console.log(reviewId);
-        res.json(data);
+        // res.json(data);
+        res.json({ result: true, data});
+
       })
       .catch(error => {
         // En cas d'erreur lors de l'enregistrement de la Review
@@ -103,7 +106,7 @@ router.get('/:toiletteId', async (req, res) => {
 
   try {
     // Trouver la toilette par ID
-    const toilette = await Toilette.findById(toiletteId);
+    const toilette = await Toilette.findOne({_id: toiletteId});
 
     if (!toilette) {
       return res.status(404).json({ message: 'Toilette not found' });
