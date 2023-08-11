@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 // recupére la fonction checkbody
 const { checkBody } = require('../modules/checkBody');
 
+
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 /* POST création d'un User */
@@ -68,5 +69,41 @@ router.post('/signin', (req, res) => {
     }
   });
 });
+
+router.put('/update/:token',(req,res) => {
+
+  const {token} = req.params;
+  const userName = req.body;
+
+  User.findOne({ token }).then(data => {
+    if (data) {
+      // Vérifiez que l'utilisateur a bien créé le compte actuellement connecté
+      user.findOne({ user: data._userName }).then(data => {
+        if (data) {
+          // Mettez à jour les champs de l'avis
+          data.userName = userName;
+          
+          // Enregistrez les modifications dans la base de données
+          data.save().then(updateduserName => {
+            res.json(updateduserName);
+          }).catch(error => {
+            console.error(error);
+            res.status(500).json({ error: "Une erreur est survenue lors de la mise à jour de l'userName" });
+          });
+        } else {
+          res.status(404).json({ error: "user non trouvé ou vous n'avez pas l'autorisation de le modifier." });
+        }
+      }).catch(error => {
+        console.error(error);
+        res.status(500).json({ error: "Une erreur est survenue lors de la recherche de l'user." });
+      });
+    } else {
+      res.status(404).json({ error: 'Utilisateur non trouvé.' });
+    }
+  }).catch(error => {
+    console.error(error);
+    res.status(500).json({ error: "Une erreur est survenue lors de la recherche de l'utilisateur." });
+  });
+})
 
 module.exports = router;

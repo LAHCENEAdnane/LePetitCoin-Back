@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 const funFact = require('../models/funFacts');
-const cloudinary = require('cloudinary').v2;
-const { env } = require('process');
-const fs = require('fs');
+// const cloudinary = require('cloudinary').v2;
+// const { env } = require('process');
+// const fs = require('fs');
 
 // router.get('/', async (req, res) => {
 //   try {
