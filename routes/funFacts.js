@@ -23,14 +23,14 @@ const funFact = require('../models/funFacts');
       //.skip() = pour que le nouveau doc aléatoire ne soit pas le même que l'actuel, à chaque appel
       const FunFact = await funFact.findOne().skip(Math.floor(Math.random() * await funFact.countDocuments()));
       console.log("try ok")
-
+      
       //res.json de FunFact car récupère le résultat de la constante
       res.json(FunFact);
     } catch (err) {
       res.status(500).json({ message: 'Erreur lors de la récupération du fun fact.' });
     }
   })
-
+   
     //FunFact = nom du modèle et nom constante
 
 module.exports = router;
