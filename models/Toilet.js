@@ -34,7 +34,12 @@ var ToiletSchema = new Schema({
   feminineHygieneProduct: {
     type: Boolean
   },
-  point_geo: {lon: Number, lat: Number}
+  point_geo: {
+    lon: Number, lat: Number
+  },
+  pictures: {
+    type: [String]
+  },
 });
 
 const Toilet = mongoose.model('toilets', ToiletSchema);
