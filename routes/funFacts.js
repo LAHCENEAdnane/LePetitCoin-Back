@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-const funFact = require('../models/funFacts');
+const funFact = require('../models/FunFacts');
 // const cloudinary = require('cloudinary').v2;
 // const { env } = require('process');
 // const fs = require('fs');
