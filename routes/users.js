@@ -78,7 +78,7 @@ router.put('/update/:token',(req,res) => {
   User.findOne({ token }).then(data => {
     if (data) {
       // Vérifiez que l'utilisateur a bien créé le compte actuellement connecté
-      user.findOne({ user: data._userName }).then(data => {
+      User.findOne({ user: data.userName }).then(data => {
         if (data) {
           // Mettez à jour les champs de l'avis
           data.userName = userName;

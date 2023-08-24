@@ -59,7 +59,7 @@ router.get("/", (req, res) => {
 //     res.json({ result: false, error: "taper une ville" });
 //     return;
 //   }
-  Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
+  Toilet.find().then(
     (data) => {
       if (data === null) {
         res.json({ result: false, error: "mince, c'est schrodingers coin" });
@@ -88,7 +88,7 @@ router.post("/recherche", (req, res) => {
 });
 
 router.get("/map", async (req, res) => {
-  const { latitude, longitude } = req.query;
+  // const { latitude, longitude } = req.query;
 
   Toilet.find({ commune: { $regex: new RegExp(req.body.commune, "i") } }).then(
     (data) => {
